@@ -1,0 +1,184 @@
+BERT fait lui même des évaluations, je colle ainsi les résultats:
+
+(python3.9) melaniezhuge@Elpis ~/Documents/20_Outils_de_Traitement/projet ❯ python3 ModeleBERT.py dataset_aug.csv
+Distribution des labels dans tout le dataset :
+label
+1    0.333333
+0    0.333333
+2    0.333333
+Name: proportion, dtype: float64
+
+Distribution labels dans train :
+label
+1    0.333333
+2    0.333333
+0    0.333333
+Name: proportion, dtype: float64
+
+Distribution labels dans test :
+label
+1    0.333333
+2    0.333333
+0    0.333333
+Name: proportion, dtype: float64
+Map: 100%|██████████████████████████| 1104/1104 [00:01<00:00, 728.63 examples/s]
+Map: 100%|████████████████████████████| 276/276 [00:00<00:00, 764.17 examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/Users/melaniezhuge/Documents/20_Outils_de_Traitement/projet/ModeleBERT.py:77: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+  0%|                                                   | 0/690 [00:00<?, ?it/s]/Users/melaniezhuge/Documents/50_PPE2/python3.9/lib/python3.9/site-packages/torch/utils/data/dataloader.py:683: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 1.1039, 'grad_norm': 7.847282409667969, 'learning_rate': 1.973913043478261e-05, 'epoch': 0.07}
+{'loss': 1.0629, 'grad_norm': 5.999658107757568, 'learning_rate': 1.9449275362318843e-05, 'epoch': 0.14}
+{'loss': 1.0336, 'grad_norm': 9.886765480041504, 'learning_rate': 1.9159420289855074e-05, 'epoch': 0.22}
+{'loss': 1.0111, 'grad_norm': 4.690528392791748, 'learning_rate': 1.8869565217391305e-05, 'epoch': 0.29}
+{'loss': 0.9963, 'grad_norm': 4.652862548828125, 'learning_rate': 1.857971014492754e-05, 'epoch': 0.36}
+{'loss': 0.9074, 'grad_norm': 3.3214993476867676, 'learning_rate': 1.828985507246377e-05, 'epoch': 0.43}
+{'loss': 0.982, 'grad_norm': 5.680971145629883, 'learning_rate': 1.8e-05, 'epoch': 0.51}
+{'loss': 0.9709, 'grad_norm': 12.164477348327637, 'learning_rate': 1.771014492753623e-05, 'epoch': 0.58}
+{'loss': 0.8691, 'grad_norm': 12.653088569641113, 'learning_rate': 1.7420289855072465e-05, 'epoch': 0.65}
+{'loss': 1.1486, 'grad_norm': 19.11480140686035, 'learning_rate': 1.71304347826087e-05, 'epoch': 0.72}
+{'loss': 1.0271, 'grad_norm': 3.735621213912964, 'learning_rate': 1.6840579710144927e-05, 'epoch': 0.8}
+{'loss': 0.9699, 'grad_norm': 3.41416072845459, 'learning_rate': 1.655072463768116e-05, 'epoch': 0.87}
+{'loss': 0.8815, 'grad_norm': 18.936750411987305, 'learning_rate': 1.6260869565217392e-05, 'epoch': 0.94}
+ 20%|████████▏                                | 138/690 [00:56<03:53,  2.36it/s]
+              precision    recall  f1-score   support35 [00:03<00:00,  8.91it/s]
+
+     négatif       0.74      0.55      0.63        92
+      neutre       0.40      0.89      0.55        92
+     positif       0.00      0.00      0.00        92
+
+    accuracy                           0.48       276
+   macro avg       0.38      0.48      0.39       276
+weighted avg       0.38      0.48      0.39       276
+
+{'eval_loss': 0.9193038940429688, 'eval_accuracy': 0.48188405797101447, 'eval_f1_macro': 0.3940117853161331, 'eval_runtime': 3.9913, 'eval_samples_per_second': 69.15, 'eval_steps_per_second': 8.769, 'epoch': 1.0}
+ 20%|████████▏                                | 138/690 [01:00<03:53,  2.36it/s/Users/melaniezhuge/Documents/50_PPE2/python3.9/lib/python3.9/site-packages/torch/utils/data/dataloader.py:683: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 0.9693, 'grad_norm': 9.539243698120117, 'learning_rate': 1.5971014492753626e-05, 'epoch': 1.01}
+{'loss': 0.8843, 'grad_norm': 5.585206508636475, 'learning_rate': 1.5681159420289857e-05, 'epoch': 1.09}
+{'loss': 0.8801, 'grad_norm': 25.984373092651367, 'learning_rate': 1.5391304347826088e-05, 'epoch': 1.16}
+{'loss': 0.9621, 'grad_norm': 50.456974029541016, 'learning_rate': 1.5101449275362322e-05, 'epoch': 1.23}
+{'loss': 0.9526, 'grad_norm': 4.604532718658447, 'learning_rate': 1.4811594202898551e-05, 'epoch': 1.3}
+{'loss': 0.9351, 'grad_norm': 4.049940586090088, 'learning_rate': 1.4521739130434785e-05, 'epoch': 1.38}
+{'loss': 0.8746, 'grad_norm': 5.6823296546936035, 'learning_rate': 1.4231884057971014e-05, 'epoch': 1.45}
+{'loss': 0.8434, 'grad_norm': 21.51909065246582, 'learning_rate': 1.3942028985507248e-05, 'epoch': 1.52}
+{'loss': 0.9666, 'grad_norm': 13.729330062866211, 'learning_rate': 1.3652173913043479e-05, 'epoch': 1.59}
+{'loss': 0.7622, 'grad_norm': 6.947343826293945, 'learning_rate': 1.3362318840579712e-05, 'epoch': 1.67}
+{'loss': 0.7174, 'grad_norm': 11.732230186462402, 'learning_rate': 1.3072463768115944e-05, 'epoch': 1.74}
+{'loss': 0.8531, 'grad_norm': 17.95436668395996, 'learning_rate': 1.2782608695652175e-05, 'epoch': 1.81}
+{'loss': 0.9999, 'grad_norm': 28.03852081298828, 'learning_rate': 1.2492753623188407e-05, 'epoch': 1.88}
+{'loss': 0.8669, 'grad_norm': 23.522003173828125, 'learning_rate': 1.2202898550724638e-05, 'epoch': 1.96}
+ 40%|████████████████▍                        | 276/690 [02:01<03:06,  2.23it/s]
+              precision    recall  f1-score   support35 [00:03<00:00,  8.56it/s]
+
+     négatif       0.82      0.76      0.79        92
+      neutre       0.49      0.75      0.59        92
+     positif       0.71      0.38      0.50        92
+
+    accuracy                           0.63       276
+   macro avg       0.67      0.63      0.63       276
+weighted avg       0.67      0.63      0.63       276
+
+{'eval_loss': 0.7788295149803162, 'eval_accuracy': 0.6304347826086957, 'eval_f1_macro': 0.6257193141434035, 'eval_runtime': 4.1011, 'eval_samples_per_second': 67.298, 'eval_steps_per_second': 8.534, 'epoch': 2.0}
+ 40%|████████████████▍                        | 276/690 [02:05<03:06,  2.23it/s/Users/melaniezhuge/Documents/50_PPE2/python3.9/lib/python3.9/site-packages/torch/utils/data/dataloader.py:683: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 0.6393, 'grad_norm': 39.257789611816406, 'learning_rate': 1.191304347826087e-05, 'epoch': 2.03}
+{'loss': 0.6576, 'grad_norm': 19.14154052734375, 'learning_rate': 1.1623188405797103e-05, 'epoch': 2.1}
+{'loss': 0.8933, 'grad_norm': 15.2595796585083, 'learning_rate': 1.1333333333333334e-05, 'epoch': 2.17}
+{'loss': 0.6934, 'grad_norm': 27.011362075805664, 'learning_rate': 1.1043478260869566e-05, 'epoch': 2.25}
+{'loss': 0.7102, 'grad_norm': 26.54093360900879, 'learning_rate': 1.0753623188405797e-05, 'epoch': 2.32}
+{'loss': 0.6626, 'grad_norm': 26.54094886779785, 'learning_rate': 1.046376811594203e-05, 'epoch': 2.39}
+{'loss': 0.5073, 'grad_norm': 20.56171417236328, 'learning_rate': 1.017391304347826e-05, 'epoch': 2.46}
+{'loss': 0.6803, 'grad_norm': 23.151226043701172, 'learning_rate': 9.884057971014493e-06, 'epoch': 2.54}
+{'loss': 0.6784, 'grad_norm': 7.176253318786621, 'learning_rate': 9.594202898550725e-06, 'epoch': 2.61}
+{'loss': 0.5818, 'grad_norm': 9.830753326416016, 'learning_rate': 9.304347826086956e-06, 'epoch': 2.68}
+{'loss': 0.754, 'grad_norm': 10.739261627197266, 'learning_rate': 9.01449275362319e-06, 'epoch': 2.75}
+{'loss': 0.648, 'grad_norm': 33.377933502197266, 'learning_rate': 8.724637681159421e-06, 'epoch': 2.83}
+{'loss': 0.5171, 'grad_norm': 24.720399856567383, 'learning_rate': 8.434782608695653e-06, 'epoch': 2.9}
+{'loss': 0.6525, 'grad_norm': 19.96982192993164, 'learning_rate': 8.144927536231884e-06, 'epoch': 2.97}
+ 60%|████████████████████████▌                | 414/690 [03:34<02:42,  1.70it/s]
+              precision    recall  f1-score   support35 [00:04<00:00,  6.94it/s]
+
+     négatif       0.89      0.80      0.85        92
+      neutre       0.65      0.67      0.66        92
+     positif       0.71      0.75      0.73        92
+
+    accuracy                           0.74       276
+   macro avg       0.75      0.74      0.75       276
+weighted avg       0.75      0.74      0.75       276
+
+{'eval_loss': 0.6357754468917847, 'eval_accuracy': 0.7427536231884058, 'eval_f1_macro': 0.745149161319374, 'eval_runtime': 5.0056, 'eval_samples_per_second': 55.138, 'eval_steps_per_second': 6.992, 'epoch': 3.0}
+ 60%|████████████████████████▌                | 414/690 [03:39<02:42,  1.70it/s/Users/melaniezhuge/Documents/50_PPE2/python3.9/lib/python3.9/site-packages/torch/utils/data/dataloader.py:683: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 0.4969, 'grad_norm': 12.257006645202637, 'learning_rate': 7.855072463768117e-06, 'epoch': 3.04}
+{'loss': 0.5323, 'grad_norm': 12.38302230834961, 'learning_rate': 7.565217391304348e-06, 'epoch': 3.12}
+{'loss': 0.5141, 'grad_norm': 8.287083625793457, 'learning_rate': 7.27536231884058e-06, 'epoch': 3.19}
+{'loss': 0.5028, 'grad_norm': 47.83230209350586, 'learning_rate': 6.9855072463768125e-06, 'epoch': 3.26}
+{'loss': 0.5258, 'grad_norm': 19.975996017456055, 'learning_rate': 6.695652173913044e-06, 'epoch': 3.33}
+{'loss': 0.4076, 'grad_norm': 55.55522918701172, 'learning_rate': 6.405797101449276e-06, 'epoch': 3.41}
+{'loss': 0.4662, 'grad_norm': 32.121849060058594, 'learning_rate': 6.115942028985507e-06, 'epoch': 3.48}
+{'loss': 0.3392, 'grad_norm': 6.536346435546875, 'learning_rate': 5.826086956521739e-06, 'epoch': 3.55}
+{'loss': 0.3706, 'grad_norm': 31.263290405273438, 'learning_rate': 5.536231884057971e-06, 'epoch': 3.62}
+{'loss': 0.5606, 'grad_norm': 46.23011016845703, 'learning_rate': 5.246376811594204e-06, 'epoch': 3.7}
+{'loss': 0.4568, 'grad_norm': 34.65385818481445, 'learning_rate': 4.9565217391304355e-06, 'epoch': 3.77}
+{'loss': 0.3477, 'grad_norm': 26.732540130615234, 'learning_rate': 4.666666666666667e-06, 'epoch': 3.84}
+{'loss': 0.3825, 'grad_norm': 54.193973541259766, 'learning_rate': 4.376811594202899e-06, 'epoch': 3.91}
+{'loss': 0.4361, 'grad_norm': 20.020160675048828, 'learning_rate': 4.086956521739131e-06, 'epoch': 3.99}
+ 80%|████████████████████████████████▊        | 552/690 [05:04<01:21,  1.69it/s]
+              precision    recall  f1-score   support35 [00:04<00:00,  6.97it/s]
+
+     négatif       0.97      0.73      0.83        92
+      neutre       0.61      0.77      0.68        92
+     positif       0.76      0.75      0.75        92
+
+    accuracy                           0.75       276
+   macro avg       0.78      0.75      0.76       276
+weighted avg       0.78      0.75      0.76       276
+
+{'eval_loss': 0.5898418426513672, 'eval_accuracy': 0.75, 'eval_f1_macro': 0.7563629349980028, 'eval_runtime': 5.0475, 'eval_samples_per_second': 54.68, 'eval_steps_per_second': 6.934, 'epoch': 4.0}
+ 80%|████████████████████████████████▊        | 552/690 [05:09<01:21,  1.69it/s/Users/melaniezhuge/Documents/50_PPE2/python3.9/lib/python3.9/site-packages/torch/utils/data/dataloader.py:683: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 0.4181, 'grad_norm': 17.13531494140625, 'learning_rate': 3.797101449275363e-06, 'epoch': 4.06}
+{'loss': 0.3463, 'grad_norm': 9.934430122375488, 'learning_rate': 3.5072463768115945e-06, 'epoch': 4.13}
+{'loss': 0.4003, 'grad_norm': 38.85047149658203, 'learning_rate': 3.217391304347826e-06, 'epoch': 4.2}
+{'loss': 0.3765, 'grad_norm': 50.72570037841797, 'learning_rate': 2.927536231884058e-06, 'epoch': 4.28}
+{'loss': 0.3204, 'grad_norm': 16.00899314880371, 'learning_rate': 2.63768115942029e-06, 'epoch': 4.35}
+{'loss': 0.3068, 'grad_norm': 1.543631672859192, 'learning_rate': 2.347826086956522e-06, 'epoch': 4.42}
+{'loss': 0.2502, 'grad_norm': 11.867229461669922, 'learning_rate': 2.0579710144927535e-06, 'epoch': 4.49}
+{'loss': 0.2764, 'grad_norm': 18.220823287963867, 'learning_rate': 1.7681159420289855e-06, 'epoch': 4.57}
+{'loss': 0.1876, 'grad_norm': 42.029563903808594, 'learning_rate': 1.4782608695652176e-06, 'epoch': 4.64}
+{'loss': 0.2282, 'grad_norm': 40.18212127685547, 'learning_rate': 1.1884057971014494e-06, 'epoch': 4.71}
+{'loss': 0.2785, 'grad_norm': 28.97032356262207, 'learning_rate': 8.985507246376813e-07, 'epoch': 4.78}
+{'loss': 0.2982, 'grad_norm': 7.719948768615723, 'learning_rate': 6.086956521739131e-07, 'epoch': 4.86}
+{'loss': 0.313, 'grad_norm': 8.382962226867676, 'learning_rate': 3.1884057971014496e-07, 'epoch': 4.93}
+{'loss': 0.299, 'grad_norm': 8.534978866577148, 'learning_rate': 2.8985507246376815e-08, 'epoch': 5.0}
+100%|█████████████████████████████████████████| 690/690 [06:31<00:00,  1.77it/s]
+              precision    recall  f1-score   support35 [00:04<00:00,  7.04it/s]
+
+     négatif       0.91      0.86      0.88        92
+      neutre       0.74      0.73      0.73        92
+     positif       0.77      0.82      0.79        92
+
+    accuracy                           0.80       276
+   macro avg       0.80      0.80      0.80       276
+weighted avg       0.80      0.80      0.80       276
+
+{'eval_loss': 0.5301540493965149, 'eval_accuracy': 0.8007246376811594, 'eval_f1_macro': 0.8014652285382687, 'eval_runtime': 4.917, 'eval_samples_per_second': 56.132, 'eval_steps_per_second': 7.118, 'epoch': 5.0}
+{'train_runtime': 397.5961, 'train_samples_per_second': 13.883, 'train_steps_per_second': 1.735, 'train_loss': 0.6571965015452841, 'epoch': 5.0}                
+100%|█████████████████████████████████████████| 690/690 [06:37<00:00,  1.74it/s]
+/Users/melaniezhuge/Documents/50_PPE2/python3.9/lib/python3.9/site-packages/torch/utils/data/dataloader.py:683: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+ 97%|█████████████████████████████████████████▊ | 34/35 [00:04<00:00,  7.18it/s]
+              precision    recall  f1-score   support
+
+     négatif       0.91      0.86      0.88        92
+      neutre       0.74      0.73      0.73        92
+     positif       0.77      0.82      0.79        92
+
+    accuracy                           0.80       276
+   macro avg       0.80      0.80      0.80       276
+weighted avg       0.80      0.80      0.80       276
+
+100%|███████████████████████████████████████████| 35/35 [00:04<00:00,  7.48it/s]
